@@ -18,11 +18,6 @@ const Navbar = () => {
       <h1 className="text-xs sm:text-sm md:text-xl lg:text-3xl font-black text-center flex-1">
         GLOBAL SERVICES & LEGAL ASSOCIATES
       </h1>
-
-      {/* Optional button */}
-      {/* <button className="bg-white text-gray-900 px-3 py-1 md:px-4 md:py-2 rounded-full hidden md:block">
-    Contact US
-  </button> */}
     </nav>
   );
 };
