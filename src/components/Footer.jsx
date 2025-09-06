@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#272626] text-gray-200 py-10 px-5">
+    <footer className="w-full bg-[#272626] text-gray-200 py-10 px-5 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
       <div className="mb-5">
         <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between  gap-8 ">
           {/* Contact Numbers */}

@@ -21,7 +21,7 @@ const HomeServices = () => {
     return () => window.removeEventListener("resize", updateCount);
   }, []);
   return (
-    <div className="w-full bg-gray-50 py-16 px-6 md:px-20">
+    <div className="w-full bg-[#272626] py-16 px-6 md:px-20">
       <div className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
         <Title text1={"Our"} text2={"Services"} />
       </div>
@@ -30,7 +30,7 @@ const HomeServices = () => {
         {services.slice(0, visibleCount).map((service, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:shadow-gray-600 transition-all duration-300 text-center flex flex-col items-center"
+            className="bg-gray-300 p-6 rounded-xl shadow-md hover:shadow-3xl hover:shadow-amber-300 transition-all duration-300 text-center flex flex-col items-center"
           >
             <h3 className="mt-4 text-xl font-semibold text-gray-800">
               {service.title}
@@ -43,7 +43,7 @@ const HomeServices = () => {
       <div className="mt-10 flex justify-center">
         <Link
           to="/services"
-          className="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300"
+          className="bg-amber-300 hover:bg-amber-400 text-gray-800 font-semibold px-6 py-3 rounded-full transition-all duration-300"
         >
           View All Services
         </Link>
