@@ -40,7 +40,7 @@ const Services = () => {
       {/* Breadcrumb / Back button */}
       <NavLink
         to={"/"}
-        className="fixed top-25 left-0 bg-amber-400 text-sm md:text-base font-medium text-gray-200 px-6 py-3 block z-10 shadow-md"
+        className="fixed top-25 left-0 bg-amber-300 hover:bg-amber-400text-sm md:text-base font-medium text-gray-800 px-6 py-3 block z-10 shadow-md"
       >
         {/* <span>Home</span> */}
         Home
