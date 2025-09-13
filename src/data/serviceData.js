@@ -1,44 +1,44 @@
 
 export const services = [
-    // LICENCE SERVICES
+    // License SERVICES
     {
         image: "src/assets/service/FDA .jpeg",
-        title: "Drug Licence (FDA)",
-        description: "Assistance with applying, renewing, or modifying FDA drug licences.",
+        title: "Drug License (FDA)",
+        description: "Assistance with applying, renewing, or modifying FDA drug Licenses.",
     },
     {
         image: "src/assets/service/Pharmacy Council .jpeg",
         title: "Maharashtra State Pharmacy Council (MSPC)",
-        description: "Support with pharmacist licence, renewals, transfers, and MSPC-related services.",
+        description: "Support with pharmacist License, renewals, transfers, and MSPC-related services.",
     },
     {
-        image: "src/assets/service/Food licence.jpeg",
-        title: "Food Licence (FSSAI)",
-        description: "Get FSSAI licence for food businesses, including renewals and modifications.",
+        image: "src/assets/service/Food License.jpeg",
+        title: "Food License (FSSAI)",
+        description: "Get FSSAI License for food businesses, including renewals and modifications.",
     },
     {
         image: "src/assets/service/Gumasta License.jpeg",
-        title: "Gumasta Licence",
-        description: "Quick services for business establishment licence across Maharashtra.",
+        title: "Gumasta License",
+        description: "Quick services for business establishment License across Maharashtra.",
     },
     {
         image: "src/assets/service/Udyam Registration.jpeg",
-        title: "Udyam Licence",
+        title: "Udyam License",
         description: "Helping enterprises register under Udyam/MSME schemes.",
     },
     {
         image: "src/assets/service/Fire License.jpeg",
-        title: "Fire Licence",
-        description: "Obtain fire safety licences for commercial and residential properties.",
+        title: "Fire License",
+        description: "Obtain fire safety Licenses for commercial and residential properties.",
     },
     {
         image: "src/assets/service/Health License.jpeg",
-        title: "Health Licence",
-        description: "Documentation support for securing health-related licences.",
+        title: "Health License",
+        description: "Documentation support for securing health-related Licenses.",
     },
     {
         image: "src/assets/service/IEC.jpeg",
-        title: "Export Code Licence",
+        title: "Export Code License",
         description: "Assistance with obtaining important export code for international trade.",
     },
 
@@ -65,8 +65,8 @@ export const services = [
     },
     {
         image: "src/assets/service/Driving License.jpeg",
-        title: "Driving Licence",
-        description: "Application and renewal of driving licences.",
+        title: "Driving License",
+        description: "Application and renewal of driving Licenses.",
     },
     {
         image: "src/assets/service/Call for Nikah.jpeg",
@@ -121,9 +121,9 @@ export const services = [
         description: "Income Tax Return filing services for individuals and businesses.",
     },
     {
-        image: "src/assets/service/Leave & Licence Agreement Registration.jpeg",
-        title: "Leave & Licence Agreement Registration",
-        description: "Support for drafting and registering leave & licence agreements.",
+        image: "src/assets/service/Leave & License Agreement Registration.jpeg",
+        title: "Leave & License Agreement Registration",
+        description: "Support for drafting and registering leave & License agreements.",
     },
 
     // OTHER SERVICES
