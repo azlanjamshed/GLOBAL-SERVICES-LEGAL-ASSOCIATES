@@ -15,7 +15,7 @@ const Navbar = () => {
       </NavLink>
 
       {/* Title */}
-      <h1 className="text-xs sm:text-sm md:text-xl lg:text-3xl font-black text-center flex-1">
+      <h1 className="text-sm sm:text-sm md:text-xl lg:text-3xl font-black text-center flex-1 text-amber-400">
         GLOBAL SERVICES & LEGAL ASSOCIATES
       </h1>
     </nav>

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <div
-      className="w-full py-20  object-cover bg-center bg-cover text-white text-center flex  items-center justify-center"
+      className="w-full py-20 md:py-30  object-cover bg-center bg-cover text-white text-center flex  items-center justify-center"
       style={{
         backgroundImage: `linear-gradient(rgba(39,38,38,0.8), rgba(39,38,38,0.8)), url(${hero})`,
       }}

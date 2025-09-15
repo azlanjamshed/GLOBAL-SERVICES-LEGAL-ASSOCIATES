@@ -1,100 +1,81 @@
+import { Link } from "react-router-dom";
 
-
-import React, { useState } from "react";
 import { services } from "../data/serviceData";
-import Title from "../components/Title";
-import { NavLink } from "react-router-dom";
 
-const Services = () => {
-  const [selectedService, setSelectedService] = useState(null);
-
-  const handleCardClick = (service) => {
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {
-    setSelectedService(null);
-  };
-
+const ServicesSection = () => {
   return (
-    <div className="relative">
-      {/* Back Button */}
-      <NavLink
-        to={"/"}
-        className="fixed top-20 left-0 bg-amber-300 hover:bg-amber-400 
-        text-sm md:text-base font-semibold text-gray-800 px-6 py-3 
-        block z-10 shadow-md rounded-tr-xl rounded-br-xl"
-      >
-        Home
-      </NavLink>
-
-      {/* Services Section */}
-      <div className="w-full bg-[#272626] py-16 px-6 md:px-20">
-        <div className="text-3xl md:text-4xl font-bold text-center text-gray-100 mb-12">
-          <Title text1={"All"} text2={"Services"} />
-        </div>
-
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              onClick={() => handleCardClick(service)}
-              className="bg-gray-300 p-6 rounded-xl shadow-md 
-              hover:shadow-3xl hover:shadow-amber-300 
-              transition-all duration-300 text-center flex flex-col items-center 
-              cursor-pointer"
-            >
-              <h3 className="mt-4 text-xl font-semibold text-gray-800">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-gray-600 text-sm">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+    <div className="bg-[#272626] text-center py-10 px-4 sm:px-8 lg:px-16">
+      {/* Heading */}
+      <div className="inline-flex gap-3 items-center mb-8">
+        <p className="text-amber-400 text-3xl font-semibold">
+          Our <span className="text-white">Services</span>
+        </p>
+        <span className="w-10 sm:w-16 h-[2px] bg-amber-500"></span>
       </div>
 
-      {/* Popup Modal */}
-
-      {selectedService && (
-        <div
-          onClick={closeModal}
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50"
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="bg-white/95 p-6 md:p-8 rounded-2xl shadow-2xl max-w-lg w-[90%] text-center transform transition-all scale-100 hover:scale-[1.02]"
+      {/* Services Grid */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, index) => (
+          <Link
+            to={`/services/${service.id}`}
+            key={index}
+            className="bg-[#1e1e1e] p-6 rounded-2xl shadow-lg hover:shadow-xl
+               transition transform hover:-translate-y-1 border border-gray-700 "
           >
-            {/* Service Image */}
-            <img
-              src={selectedService.image}
-              alt={selectedService.title}
-              className="w-full h-64 object-contain rounded-xl mb-4 shadow-md"
-            />
+            <h2 className="text-2xl  font-bold mb-4 text-amber-400 text-center">
+              {service.category}
+            </h2>
 
-            {/* Title */}
-            <h3 className="text-2xl font-extrabold text-gray-800">
-              {selectedService.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-gray-600 mt-3 leading-relaxed">
-              {selectedService.description}
-            </p>
-
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="mt-6 bg-amber-400 hover:bg-amber-500 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow-md transition-all"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+            <ul className="space-y-2 text-gray-300 text-left text-md md:text-xl leading-relaxed">
+              {service.items.map((item, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="text-amber-500 mr-2">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Services;
+export default ServicesSection;
+
+// import { Link } from "react-router-dom";
+// import { categories } from "../data/ServiceCategories";
+// import { services } from "../data/serviceData";
+
+// export default function Services() {
+//   return (
+//     <div className="bg-[#272626] text-center py-10 px-4 sm:px-8 lg:px-16">
+//       {/* Heading */}
+//       <div className="inline-flex gap-3 items-center mb-8">
+//         <p className="text-amber-400 text-3xl font-semibold">
+//           Our <span className="text-white">Services</span>
+//         </p>
+//         <span className="w-10 sm:w-16 h-[2px] bg-amber-500"></span>
+//       </div>
+
+//       {/* Grid */}
+//       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+//         {categories.map((category) => (
+//           <Link key={category.id} to={`/services/${category.id}`}>
+//             <div
+//               className="bg-[#1e1e1e] p-6 rounded-2xl shadow-lg hover:shadow-2xl
+//                           transition transform hover:-translate-y-1 border border-gray-700 cursor-pointer"
+//             >
+//               <h2 className="text-lg sm:text-xl font-bold mb-4 text-amber-400 text-center">
+//                 {category.name}
+//               </h2>
+//               <p className="text-gray-400 text-sm">Click to view services</p>
+//             </div>
+
+//           </Link>
+//         ))}
+//       </div>
+
+//     </div>
+//   );
+// }
