@@ -14,23 +14,23 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-4 mt-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/gs_and_la?igsh=dm0yNWQwcXpjMHM1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-amber-400 transition"
               >
                 <FaInstagram size={22} />
               </a>
-              <a
+              {/* <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-amber-400 transition"
               >
                 <FaFacebookF size={22} />
-              </a>
+              </a> */}
               <a
-                href="https://google.com"
+                href="https://share.google/vaxouN7WCTp0yuFOO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-amber-400 transition"
@@ -38,7 +38,7 @@ export default function Footer() {
                 <FaGoogle size={22} />
               </a>
               <a
-                href="https://indiamart.com"
+                href="https://jsdl.in/RSL-DWW1756196169"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-amber-400 transition"
