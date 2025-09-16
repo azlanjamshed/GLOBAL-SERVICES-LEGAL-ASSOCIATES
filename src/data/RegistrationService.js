@@ -19,18 +19,24 @@ export const RegistrationService = [
     },
     {
         id: 4,
+        title: "Trade Mark",
+        details: "Assistance with trademark registration, renewal, and protection of your brand name, logo, or symbol.",
+        image: "/service/Trade Mark.jpeg",
+    },
+    {
+        id: 5,
         title: "GST Registration",
         details: "Apply for GST registration and ensure smooth tax compliance.",
         image: "/service/GST Registration.jpeg",
     },
     {
-        id: 5,
+        id: 6,
         title: "ITR Filing",
         details: "Professional help with filing your Income Tax Returns (ITR).",
         image: "/service/ITR Filing.jpeg",
     },
     {
-        id: 6,
+        id: 7,
         title: "Leave and Licence Agreement Registration",
         details: "Drafting and registering Leave & Licence agreements legally.",
         image: "/service/Leave & Licence Agreement Registration.jpeg",

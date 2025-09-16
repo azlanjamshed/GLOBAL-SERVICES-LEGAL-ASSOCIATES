@@ -22,9 +22,11 @@ export const services = [
             "Property Registration",
             "Limited Liability Partnership Registration (LLP)",
             "Private Limited Company Registration (PVT LTD)",
+            "Trade Mark",
             "GST Registration",
             "ITR Filing",
             "Leave And Licence Agreement Registration",
+
         ],
     },
     {

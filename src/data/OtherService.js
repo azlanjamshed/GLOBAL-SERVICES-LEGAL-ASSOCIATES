@@ -27,7 +27,7 @@ export const OtherService = [
         id: 5,
         title: "Power Of Attorney",
         details: "Assistance with creating and registering power of attorney.",
-        image: "/service/Pharmacy Council .jpeg",
+        image: "/service/Power of Attorney.jpeg",
     },
     {
         id: 6,
