@@ -21,23 +21,7 @@ const ServiceDetails = () => {
         </p>
         <span className="w-10 sm:w-16 h-[2px] bg-amber-500"></span>
       </div>
-      {/* <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {serviceData.map((service) => (
-          <div
-            key={service.id}
-            className="bg-[#1e1e1e] p-6 rounded-xl text-center shadow-lg hover:shadow-2xl
-               transition transform hover:-translate-y-1 border border-gray-700"
-          >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="rounded-lg mb-4 w-full h-40 object-contain"
-            />
-            <h2 className="text-lg font-bold text-white">{service.title}</h2>
-            <p className="text-gray-400 text-sm mt-2">{service.details}</p>
-          </div>
-        ))}
-      </div> */}
+
       <div className="grid gap-8 md:gap-20 sm:grid-cols-2 lg:grid-cols-3 justify-items-center ">
         {serviceData.map((service) => (
           <div

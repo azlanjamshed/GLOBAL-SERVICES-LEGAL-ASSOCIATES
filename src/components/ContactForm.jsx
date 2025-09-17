@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("idle");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -15,22 +16,31 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setStatus("sending");
 
-    const subject = encodeURIComponent("New Message from Website");
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
-    );
+    emailjs
+      .send(
+        "service_ih15mke", // 👉 replace with your Service ID
+        "template_iyytq9e", // 👉 replace with your Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "_exrgxfcfUueqB5SP" // 👉 replace with your Public Key
+      )
+      .then(() => {
+        setStatus("sent");
+        setFormData({ name: "", email: "", message: "" });
 
-    window.location.href = `mailto:info@gslassociates.in?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
+        // Reset back to idle after 3s
+        setTimeout(() => setStatus("idle"), 3000);
+      })
+      .catch((err) => {
+        console.error("❌ Failed to send email:", err);
+        alert("Something went wrong. Try again later.");
+        setStatus("idle");
       });
-      setLoading(false);
-    }, 5000);
   };
 
   return (
@@ -77,9 +87,18 @@ const ContactForm = () => {
 
           <button
             type="submit"
-            className="bg-amber-300 hover:bg-amber-400 transition-all duration-300 text-black font-semibold px-6 py-3 rounded-lg text-sm sm:text-base cursor-pointer"
+            disabled={status === "sending"}
+            className={`${
+              status === "sent"
+                ? "bg-green-500 text-white"
+                : "bg-amber-300 text-black"
+            } hover:opacity-90 transition-all duration-300 font-semibold px-6 py-3 rounded-lg text-sm sm:text-base cursor-pointer`}
           >
-            {loading ? "Opening Mail App..." : "Send Message"}
+            {status === "sending"
+              ? "Sending..."
+              : status === "sent"
+              ? "Mail Sent ✅"
+              : "Send Message"}
           </button>
         </form>
       </div>
